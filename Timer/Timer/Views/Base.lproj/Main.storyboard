@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wtB-ob-5Xu">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="23U-DE-cuv">
+            <objects>
+                <viewController id="wtB-ob-5Xu" customClass="ViewController" customModule="Timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ip5-uM-qUy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSS-aT-jcG">
+                                <rect key="frame" x="77.666666666666671" y="403" width="237.66666666666663" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45.670000000000002" id="cwo-zE-6Up"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30i-So-383">
+                                <rect key="frame" x="165.66666666666666" y="489" width="62" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Start"/>
+                                <connections>
+                                    <action selector="onStart:" destination="wtB-ob-5Xu" eventType="touchUpInside" id="dYa-pc-OPP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vf4-F8-9qc">
+                                <rect key="frame" x="162.66666666666666" y="554" width="68" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                <connections>
+                                    <action selector="resetTimer:" destination="wtB-ob-5Xu" eventType="touchUpInside" id="ot5-7L-uIx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ajd-26-PCS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="30i-So-383" firstAttribute="top" secondItem="WSS-aT-jcG" secondAttribute="bottom" constant="40" id="ITS-0Y-JVL"/>
+                            <constraint firstItem="WSS-aT-jcG" firstAttribute="centerY" secondItem="ip5-uM-qUy" secondAttribute="centerY" id="Pvf-lb-ECg"/>
+                            <constraint firstItem="Vf4-F8-9qc" firstAttribute="top" secondItem="30i-So-383" secondAttribute="bottom" constant="30" id="RAL-MJ-ZUp"/>
+                            <constraint firstItem="WSS-aT-jcG" firstAttribute="centerX" secondItem="ip5-uM-qUy" secondAttribute="centerX" id="Zev-nS-tpM"/>
+                            <constraint firstItem="Vf4-F8-9qc" firstAttribute="centerX" secondItem="ip5-uM-qUy" secondAttribute="centerX" id="haj-91-TCs"/>
+                            <constraint firstItem="30i-So-383" firstAttribute="centerX" secondItem="ip5-uM-qUy" secondAttribute="centerX" id="zCU-Yo-O34"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t4Z-6X-2qv"/>
+                    <connections>
+                        <outlet property="timerBtn" destination="30i-So-383" id="omC-wd-uXH"/>
+                        <outlet property="timerLbl" destination="WSS-aT-jcG" id="Ejj-Qb-AjY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhm-1d-uze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1912.2137404580151" y="-9.1549295774647899"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
